@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Identifier</title>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white">
+    <h1 class="text-4xl font-extrabold mb-8 text-center drop-shadow-lg">
+        I Can Identify Numbers Between 1 - 5
+    </h1>
+    <h3 class="text-2xl font-semibold mb-6 text-center">
+        Show Me a Hand Gesture
+    </h3>
+    <div class="relative w-full max-w-xs mx-auto mb-8">
+        <video id="video" class="border-4 border-white rounded-lg shadow-2xl w-full h-auto" autoplay></video>
+        <div id="gesture" class="absolute bottom-4 left-4 bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-lg animate-pulse drop-shadow-lg">
+            Waiting for your gesture...
+        </div>
+    </div>
+    <div id="gameResult" class="text-lg font-semibold bg-white bg-opacity-90 text-gray-800 p-4 border border-gray-300 rounded-lg shadow-xl w-80 text-center">
+    </div>
+    <button id="startButton" class="mt-8 bg-yellow-500 text-gray-800 font-bold py-3 px-10 rounded-lg shadow-lg hover:bg-yellow-400 transition duration-300 ease-in-out transform hover:scale-105">
+        Identify
+    </button>
+    <script src="./script.js"></script>
+</body>
+
+</html>
