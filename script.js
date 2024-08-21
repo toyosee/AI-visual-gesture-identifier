@@ -39,6 +39,7 @@ startBtn.addEventListener("click", () => {
 });
 
 // Function to handle the result of the gesture classification
+// This function uses a switch case to map gesture seen to number count
 function identifyGesture(userChoice) {
     let result = "";
 
@@ -61,6 +62,8 @@ function identifyGesture(userChoice) {
         default:
             result = "I am unable to identify your gesture at this time. Train me.";
     }
+    // Showing result in console
+    console.log(result)
 
     computerResult.innerText = result;
 }
